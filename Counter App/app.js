@@ -21,6 +21,7 @@ function subtract(){
 function reset(){
     score = 0;
     scoreBoard.innerHTML = score;
+    statement_p.innerHTML = "You reseted the counter";
 }
 
 
