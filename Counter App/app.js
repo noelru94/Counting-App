@@ -2,6 +2,7 @@ let score = 0
 let scoreBoard = document.getElementById("score-board");
 const plusButton = document.getElementById("plus-button");
 const subtractButton = document.getElementById("subtract-button");
+const reset_span = document.getElementById("reset");
 let statement_p = document.getElementById("statement");
 
 //when user picks plus, add 1
@@ -17,6 +18,12 @@ function subtract(){
     statement_p.innerHTML = "You subtracted one!";
 }
 
+function reset(){
+    score = 0;
+    scoreBoard.innerHTML = score;
+}
+
+
 
 //main, displays results
 function main(){
@@ -26,6 +33,10 @@ function main(){
 
     subtractButton.addEventListener('click',function(){
        subtract()
+    })
+
+    reset_span.addEventListener('click',function(){
+        reset()
     })
 }  
 
